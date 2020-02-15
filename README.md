@@ -1,2 +1,0 @@
-# ggwp
-Created with CodeSandbox
