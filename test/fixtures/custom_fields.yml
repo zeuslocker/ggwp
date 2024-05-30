@@ -2,10 +2,10 @@
 
 one:
   name: MyString
-  type: 1
+  field_type: 1
   tenant: one
 
 two:
   name: MyString
-  type: 1
+  field_type: 1
   tenant: two
