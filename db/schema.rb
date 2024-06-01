@@ -15,8 +15,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_30_164526) do
   enable_extension "plpgsql"
 
   create_table "custom_fields", force: :cascade do |t|
-    t.string "name"
-    t.integer "field_type"
+    t.string "name", null: false
+    t.integer "field_type", null: false
     t.bigint "tenant_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -24,14 +24,14 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_30_164526) do
   end
 
   create_table "tenants", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.jsonb "custom_fields"
+    t.string "name", null: false
+    t.jsonb "custom_fields", default: {}
     t.bigint "tenant_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

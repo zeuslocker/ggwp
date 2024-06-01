@@ -1,4 +1,4 @@
 class Tenant < ApplicationRecord
-  has_many :custom_fields
+  has_one :custom_field
   has_many :users
 end
