@@ -7,4 +7,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  with_options(except: [:new, :edit]) do |opt|
+    opt.resources :users
+    opt.resources :tenants
+  end
 end
